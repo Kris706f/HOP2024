@@ -149,7 +149,7 @@ header {
     background-image: url(images/baggrund.png);
   }
   
-  h1 {
+  .forside h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #000;
@@ -301,3 +301,118 @@ footer{
 }
 
 /*___________________________Herunder finder du alt til kategori siden________________________________*/
+.brodkrumme{
+    padding-left: 30px;
+    padding-top: 30px;
+}
+.brodkrumme a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 900;
+}
+.brodkrumme a:nth-child(2){
+    color: #007FAA;
+}
+.title h1{
+    color: #000;
+    text-align: center;
+    font-size: 50px;
+}
+.kategorierne{
+    height: 200px;
+}
+.opdelerstreg{
+    width: 80%;
+    margin: auto;
+    padding-top: 10px;
+}
+.opdelerstreg:nth-child(1){
+    margin-bottom: 10px;
+}
+.opdelerstreg hr{
+    color: #000;
+}
+.kategoriholder{
+    height: 150px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.kategoriholder a{
+    text-decoration: none;
+}
+.kategoriboks{
+    background-color: #007FAA;
+    width: 150px;
+    height: 100%;
+    border-radius: 20px;
+}
+.boksbillede{
+    width: 100%;
+    height: 110px;
+    margin: auto;
+}
+.boksbillede img{
+    width: 100%;
+}
+.bokstekst{
+    width: 90%;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+}
+.bokstekst h3{
+    color: #fff;
+    font-size: 15px;
+}
+.kortholder{
+    height: 460px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.kort{
+    background-color: #007FAA;
+    height: 450px;
+    width: 300px;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.billedekort{
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+}
+.tekstkort{
+    width: 100%;
+    height: 100px;
+}
+.tekstkort h3{
+    padding-left: 10px;
+    padding-top: 15px;
+    color: #fff;
+    font-size: 30px;
+}
+.tekstkort h2{
+    padding-left: 10px;
+    color: #fff;
+}
+.tekstkort h5{
+    padding-left: 10px;
+    color: #000;
+}
+.knapkort{
+    width: 15%;
+    height: 50px;
+    border-radius: 20px;
+    margin-left: auto;
+}
+.knapkort a{
+    color: #fff;
+    padding-left: 10%;
+    text-decoration: none;
+    font-size: 30px;
+}
