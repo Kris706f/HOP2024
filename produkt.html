@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stemmejern</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 </head>
 <header>
     <div class="logo">
@@ -72,120 +73,97 @@
         </ul>
       </nav>
         <div class="brodkrumme">
-            <span><a href="index.html">Forside > </a><a href="kategori.html">   Stemmejern</a></span>
+            <span><a href="index.html">Forside > </a><a style="color: black;" href="kategori.html">   Stemmejern   ></a><a style="color: #007FAA;" href="produkt.html">Narex Richter Stemmejern i Luksus Æske</a></span>
         </div>
-        <div class="title">
-            <h1>Stemmejern</h1>
+        <script src="script.js"></script>
+        <!--Herunder kommer selve billedet og produkt info til og være-->
+        <div class="produktside">
+            <div class="billedeside">
+                <div class="container">
+                    <div class="main-image">
+                        <img id="largeImage" src="images/stemmejernsæske-removebg-preview.png" alt="Produktbillede">
+                    </div>
+                    <div class="thumbnail-container">
+                        <img class="thumbnail" src="images/stemmejernsæske-removebg-preview.png" alt="Thumbnail 1" onclick="changeImage('images/stemmejernsæske-removebg-preview.png')">
+                        <img class="thumbnail" src="images/produktbilledeTRE.png" alt="Thumbnail 2" onclick="changeImage('images/produktbilledeTRE.png')">
+                        <img class="thumbnail" src="images/produktbilledeFIRE.png" alt="Thumbnail 3" onclick="changeImage('images/produktbilledeFIRE.png')">
+                        <img class="thumbnail" src="images/produktbilledeFEM.png" alt="Thumbnail 4" onclick="changeImage('images/produktbilledeFEM.png')">
+                    </div>
+                </div>
+            </div>
+
+            <div class="produktinfoside">
+                <div class="product-details">
+                    <h2 class="product-name">Narex Richter Stemmejern i Luksus Æske</h2>
+                    <p class="product-price">1.985,00 DKK</p>
+                    <ul>
+                        <li>Ekstraordinær Skarphed</li>
+                        <li>Præcision og Finish</li>
+                        <li>Ergonomisk Design</li>
+                        <li>Luksuriøs Præsentation</li>
+                    </ul>
+                    <br>
+                    <p class="product-info">Oplev uovertruffen præcision og langvarig 
+                        skarphed med dette luksuriøse stemmejernsæt, fremstillet i anledning 
+                        af Narex Bystrice’s 100-års jubilæum. Håndlavet med banebrydende 
+                        cryo-hærdet krom-vanadiumstål og ergonomiske asketræshåndtag, 
+                        sikrer sættet komfort og ydeevne til selv de mest krævende opgaver. 
+                        Leveres i en elegant trææske – perfekt til opbevaring eller som gave.</p>
+                    <div class="purchase-box">
+                        <label for="quantity">Antal:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" value="1">
+                        
+                        <div class="button-group">
+                            <button class="buy-now">Køb nu</button>
+                            <button class="add-to-cart">Tilføj til kurv</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-
-        <div class="kategorierne">
-            <div class="opdelerstreg">
+        <div class="holder">
+            <div class="accordion">
+                <hr>
+              <div class="accordion-item" id="question1">
+                <a class="accordion-link" href="#question1">
+                  <div class="flex">
+                    <h3>DETALJER</h3>
+                  </div>
+                  <i style="color: #007FAA;" class="icon ion-md-arrow-forward"></i>
+                  <i style="color: #007FAA;" class="icon ion-md-arrow-down"></i>
+                </a>
+                <div class="answer">
+                  <p> Richter Stemmjernsæt fra Narex leveres 
+                    i en luksuriøs trææske og indeholder fem 
+                    præcisionsstemjern i størrelserne 6 mm, 10 mm, 
+                    13 mm, 19 mm og 25 mm. Fremstillet med cryo-hærdet 
+                    krom-vanadiumstål for optimal skarphed og 
+                    holdbarhed. Ergonomiske asketræshåndtag 
+                    sikrer komfort og kontrol, perfekt til 
+                    præcisionsarbejde og professionelle projekter.</p>
+                </div>
                 <hr>
             </div>
-            <div class="kategoriholder">
-                <a href="#"><div class="kategoriboks">
-                    <div class="boksbillede">
-                        <img src="images/stemmejernssæt-removebg-preview.png" alt="">
-                    </div>
-                    <div class="bokstekst">
-                        <h3>Stemmejernssæt</h3>
-                    </div>
-                </div></a>
-                <a href="#"><div class="kategoriboks">
-                    <div class="boksbillede">
-                        <img src="images/a-removebg-preview.png" alt="">
-                    </div>
-                    <div class="bokstekst">
-                        <h3>Stemmejern</h3>
-                    </div>
-                </div></a>
-                <a href="#"><div class="kategoriboks">
-                    <div class="boksbillede">
-                        <img src="images/japanskStemmejern-removebg-preview (1).png" alt="">
-                    </div>
-                    <div class="bokstekst">
-                        <h3>Japansk Stemmejern</h3>
-                    </div>
-                </div></a>
-                <a href="#"><div class="kategoriboks">
-                    <div class="boksbillede">
-                        <img src="images/huljern-removebg-preview.png" alt="">
-                    </div>
-                    <div class="bokstekst">
-                        <h3>Huljern</h3>
-                    </div>
-                </div></a>
-                <a href="#"><div class="kategoriboks">
-                    <div class="boksbillede">
-                        <img src="images/vaerktojsrulle-removebg-preview (1).png" alt="">
-                    </div>
-                    <div class="bokstekst">
-                        <h3>Værktøjsrulle</h3>
-                    </div>
-                </div></a>
-                <a href="#"><div class="kategoriboks">
-                    <div class="boksbillede">
-                        <img src="images/snittekniv-removebg-preview.png" alt="">
-                    </div>
-                    <div class="bokstekst">
-                        <h3>Snittekniv</h3>
-                    </div>
-                </div></a>
-            </div>
-            <div class="opdelerstreg">
+              <div class="accordion-item" id="question2">
+                <a class="accordion-link" href="#question2">
+                  <div class="flex">
+                    <h3>FORSENDELSE, RETUR & BETALING</h3>
+                  </div>
+                  <i style="color: #007FAA;" class="icon ion-md-arrow-forward"></i>
+                  <i style="color: #007FAA;" class="icon ion-md-arrow-down"></i>
+                </a>
+                <div class="answer">
+                    <ul>
+                        <li><strong>Levering:</strong>GLS 1-2 hverdage</li>
+                        <li><strong>Afhentning:</strong>Kan afhentes hos Snedkerværktøj inden for 24 timer</li>
+                        <li><strong>Retur:</strong>14 dages returret og 90 dages ombytning</li>
+                        <li><strong>Betaling:</strong>Sikker betaling og mulighed for delbetaling over 4, 6, 8 eller 10 rater.</li>
+                    </ul>
+                </div>
                 <hr>
             </div>
         </div>
-        <div class="kortholder">
-            <a href="produkt.html"><div class="kort">
-                <div class="billedekort">
-                  <img src="images/stemmejernsæske-removebg-preview.png" alt="" class="vare">
-                </div>
-                <div class="tekstkort">
-                    <p>NAREX</p>
-                  <h3>Stemmejern i Luksus Æske</h3>
-                  <h2 class="pris">1985,<small>00</small> DKK</h2>
-                  <a href="#" class="koeb">Køb Nu</a>
-                </div>
-            </div></a>
-        
-            <div class="kort">
-                <div class="billedekort">
-                  <img src="images/bas-Photoroom.png" alt="" class="vare">
-                </div>
-                <div class="tekstkort">
-                    <p>Mærke</p>
-                  <h3>Produktnavn</h3>
-                  <h2 class="pris">Pris,<small>00</small> DKK</h2>
-                  <a href="#" class="koeb">Køb Nu</a>
-                </div>
-            </div>
-        
-            <div class="kort">
-                <div class="billedekort">
-                  <img src="images/bas-Photoroom.png" alt="" class="vare">
-                </div>
-                <div class="tekstkort">
-                    <p>Mærke</p>
-                  <h3>Produktnavn</h3>
-                  <h2 class="pris">Pris,<small>00</small> DKK</h2>
-                  <a href="#" class="koeb">Køb Nu</a>
-                </div>
-            </div>
-        
-            <div class="kort">
-                <div class="billedekort">
-                  <img src="images/bas-Photoroom.png" alt="" class="vare">
-                </div>
-                <div class="tekstkort">
-                    <p>Mærke</p>
-                  <h3>Produktnavn</h3>
-                  <h2 class="pris">Pris,<small>00</small> DKK</h2>
-                  <a href="#" class="koeb">Køb Nu</a>
-                </div>
-            </div>
-        
         </div>
 </body>
 <footer>

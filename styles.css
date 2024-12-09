@@ -53,25 +53,91 @@ header {
     margin-right: 12px; /* Space between icon and text */
     display: inline-block;
   }
-
-
-/*_______________________Herunder er Forside billedet og Tekst____________________________*/
-.forside {
-    height: 500px;
-    padding: 20px;
-    background-color: #000;
-    border-radius: 5px;
-    background-image: url(images/baggrund.png);
+/*___________________________Herunder er til DROPDOWN_________________________________*/
+nav {
+    &.primary-navigation {
+      margin: 0 auto;
+      display: block;
+        background-color: #007FAA;
+      padding: 20px 0 10px 0;  
+      text-align: center;
+      font-size: 16px;
+  
+      ul li {
+        list-style: none;
+        margin: 0 auto;
+        border-left: 2px solid #3ca0e7;
+        display: inline-block;
+        padding: 0 30px;
+        position: relative;
+        text-decoration: none;
+        text-align: center;
+        font-family: arvo;
+      }
+  
+      li a {
+        color: #fff;
+      }
+  
+      li a:hover {
+        color: #000;
+      }
+  
+      li:hover {
+        cursor: pointer;
+      }
+  
+      ul li ul {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+  padding-left: 0;
+        left: 0;
+        display: none;
+        background: #007FAA;
+        border-radius: 0 0 20px 20px ;
+      }
+  
+      ul li:hover > ul,
+      ul li ul:hover {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        min-width: 250px;
+        text-align: left;
+        padding-top: 20px;
+        box-shadow: 0px 3px 5px -1px #ccc;
+      }
+  
+      ul li ul li {
+        clear: both;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+        border-style: none;
+      }
+  
+      ul li ul li a:hover {
+        padding-left: 10px;
+        border-left: 2px solid #3ca0e7;
+        transition: all 0.3s ease;
+      }
+    }
   }
   
-  .forside h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #000;
-    margin-top: 10%;
-    font-size: 50px;
-    color: #fff;
+  a {
+  
+      text-decoration: none;
+  
+      &:hover {
+          color: #007FAA;
+      }
+   
   }
+  
+   ul li ul li a { transition: all 0.5s ease; }
+
+/*_______________________Herunder er Forside billedet og Tekst____________________________*/
   
   p {
     line-height: 1.6;
@@ -83,9 +149,6 @@ header {
   }
   
   .button {
-    display: block;
-    width: 200px;
-    padding: 15px;
     background-color: #007FAA;
     color: #fff;
     border: none;
@@ -95,14 +158,45 @@ header {
     font-weight: bold;
     text-align: center;
     margin: auto;
+    text-transform: uppercase;
+    padding: 30px;
+    border: 1px solid white;
   }
-
-  
-  .button:hover {
-    background-color: #fff;
-    color: #007FAA;
-  }
-
+  .button:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.7);
+    color: white;
+} 
+.hero{
+    display: flex;
+    height: 550px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url('images/snedkerbilledeET.jpg')
+   }
+.center-content{
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    width: 60%;
+}
+.center-content h1{
+    line-height: 1;
+    color: white;
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 0;
+    text-align: center;
+}  
+.center-content h3{
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: normal;
+    color: white;
+    line-height: 1;
+}
   /*____________________________Herunder er til footer______________________________*/
 footer{
     width: 100%;
@@ -215,7 +309,7 @@ footer{
 	width: 345px;
 }
 
-/*___________________________Herunder finder du alt til kategori siden________________________________*/
+/*___________________________Herunder finder du alt til den øverste del af kategori siden________________________________*/
 .brodkrumme{
     padding-left: 30px;
     padding-top: 30px;
@@ -281,21 +375,25 @@ footer{
     color: #fff;
     font-size: 15px;
 }
+/*___________________________Herunder finder du alt til den nederste del af kategori siden________________________________*/
 .kortholder{
-    height: 460px;
+    height: 500px;
     width: 100%;
     margin: auto;
     display: flex;
     justify-content: space-around;
 }
 .kort{
-    background-color: #007FAA;
     height: 450px;
     width: 300px;
     border-radius: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
+    position: relative;
+    background-color: #3ca0e7;
+    overflow: hidden;
 }
+
 .billedekort{
     width: 100%;
     height: 300px;
@@ -306,112 +404,309 @@ footer{
     height: 100px;
 }
 .tekstkort h3{
-    padding-left: 10px;
-    padding-top: 15px;
     color: #fff;
     font-size: 30px;
+    text-align: center;
 }
 .tekstkort h2{
     padding-left: 10px;
     color: #fff;
+    text-align: center;
 }
 .tekstkort h5{
     padding-left: 10px;
     color: #000;
 }
-.knapkort{
-    width: 15%;
-    height: 50px;
-    border-radius: 20px;
-    margin-left: auto;
-}
-.knapkort a{
-    color: #fff;
-    padding-left: 10%;
-    text-decoration: none;
-    font-size: 30px;
+.tekstkort p{
+    font-size: 12px;
 }
 
-/*___________________________Herunder er TEST til DROPDOWN_________________________________*/
-nav {
-    &.primary-navigation {
-      margin: 0 auto;
-      display: block;
-        background-color: #007FAA;
-      padding: 20px 0 10px 0;  
-      text-align: center;
-      font-size: 16px;
-  
-      ul li {
-        list-style: none;
-        margin: 0 auto;
-        border-left: 2px solid #3ca0e7;
-        display: inline-block;
-        padding: 0 30px;
-        position: relative;
-        text-decoration: none;
-        text-align: center;
-        font-family: arvo;
-      }
-  
-      li a {
-        color: #fff;
-      }
-  
-      li a:hover {
-        color: #3ca0e7;
-      }
-  
-      li:hover {
-        cursor: pointer;
-      }
-  
-      ul li ul {
-        visibility: hidden;
-        opacity: 0;
-        position: absolute;
-  padding-left: 0;
-        left: 0;
-        display: none;
-        background: #007FAA;
-        border-radius: 0 0 20px 20px ;
-      }
-  
-      ul li:hover > ul,
-      ul li ul:hover {
-        visibility: visible;
-        opacity: 1;
-        display: block;
-        min-width: 250px;
-        text-align: left;
-        padding-top: 20px;
-        box-shadow: 0px 3px 5px -1px #ccc;
-      }
-  
-      ul li ul li {
-        clear: both;
-        width: 100%;
-        text-align: left;
-        margin-bottom: 20px;
-        border-style: none;
-      }
-  
-      ul li ul li a:hover {
-        padding-left: 10px;
-        border-left: 2px solid #3ca0e7;
-        transition: all 0.3s ease;
-      }
-    }
-  }
-  
-  a {
-  
-      text-decoration: none;
-  
-      &:hover {
-          color: #007FAA;
-      }
+
+
+   /*_________________________Herunder er test til produktkort_____________________________*/
+
+   .kort {
+     position: relative;
+     width: 320px;
+     height: 480px;
+     background: #3ca0e7;
+     border-radius: 20px;
+     overflow: hidden;
+   }
    
+   .kort::before {
+     content: "";
+     position: absolute;
+     top: -50%;
+     width: 100%;
+     height: 100%;
+     background: #007FAA;
+     transform: skewY(345deg);
+     transition: 0.5s;
+   }
+   
+   .kort:hover::before {
+     top: -70%;
+     transform: skewY(390deg);
+   }
+   .kort .billedekort {
+     position: relative;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding-top: 20px;
+     z-index: 1;
+   }
+   .kort .tekstkort {
+     position: relative;
+     padding: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     z-index: 2;
+   }
+
+   .kort .tekstkort h3 {
+     font-size: 18px;
+     color: white;
+     font-weight: 500;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+   }
+   
+   .kort .tekstkort .pris {
+     font-size: 24px;
+     color: white;
+     font-weight: 700;
+     letter-spacing: 1px;
+   }
+   
+   .kort .tekstkort .koeb {
+     position: relative;
+     top: 100px;
+     opacity: 0;
+     padding: 10px 30px;
+     margin-top: 15px;
+     color: #000000;
+     text-decoration: none;
+     background: #fff;
+     border-radius: 30px;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     transition: 0.5s;
+   }
+   
+   .kort:hover .tekstkort .koeb {
+     top: 0;
+     opacity: 1;
+   }
+   
+   .vare {
+     height: 300px;
+     width: auto;
+   }
+   
+/*Herunder kommer der til og være CSS til at med produktsiden*/
+.produktside{
+    display: flex;
+}
+.billedeside{
+    width: 50%;
+    height: 600px;
+}
+.produktinfoside{
+    width: 50%;
+    height: 600px;
+}
+/*_____________Herunder er til selve billede delen____________________*/
+.container {
+ margin-top: 10%;
+}
+
+.main-image {
+    flex: 2;
+    text-align: center;
+}
+
+.thumbnail-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbnail {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border: 2px solid #007FAA;
+    border-radius: 20px;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+/*_____________Herunder er til selve produktinfo delen____________________*/
+.product-details {
+    width: 100%; /* 50% af siden, når jeg har en container der dækker 100% */
+    padding: 20px;
+    box-sizing: border-box; /* Sørger for at padding ikke påvirker bredden */
+}
+
+.product-name {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.product-price {
+    font-size: 25px;
+    color: #007FAA;
+}
+
+.product-info {
+    font-size: 16px;
+    color: #000;
+}
+
+.purchase-box {
+    margin-top: 10px;
+    border: 1px solid #007FAA;
+    padding: 15px;
+    border-radius: 5px;
+    width: 50%;
+    background-color: #007FAA;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.purchase-box label {
+    margin-right: 10px;
+}
+
+.purchase-box input[type="number"] {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.button-group {
+    margin-top: 10px;
+}
+
+.button-group button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-group .buy-now {
+    background-color: #28a745; /* Grøn farve */
+    color: #FFF;
+    width: 45%;
+}
+
+.button-group .add-to-cart {
+    background-color: #fff; /* Blå farve */
+    color: #007FAA;
+    width: 45%;
+}
+
+/*___________________Herunder kommer der til og være css til Accordion______*/
+.holder{
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    padding-bottom: 5%;
   }
   
-   ul li ul li a { transition: all 0.5s ease; }
+  .accordion-item{
+    border-radius: .4rem;
+  }
+  
+  .accordion-item hr{
+    border: 1px solid #000;
+  }
+  .accordion hr{
+    border: 1px solid #000;
+  }
+  .accordion-link{
+    font-size: 1.6rem;
+    color: #000;
+    text-decoration: none;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+  
+  .accordion-link h3{
+    font-weight:500;
+    font-size: 20px;
+  }
+  
+  .accordion-link i{
+    color: #e7d5ff;
+    padding: .5rem;
+    
+  }
+  
+  .accordion-link ul{
+    display:flex;
+    align-items: flex-end;
+    list-style-type: none;
+    margin-left: 25px;
+  }
+  
+  .accordion-link li{
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 0 0 1px 5px;
+  }
+  
+  .accordion-link div{
+    display: flex;
+  }
+  
+  .accordion-link .ion-md-arrow-down{
+    display: none;
+  }
+  
+  .answer{
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    transition: max-height 650ms;
+  }
+  
+  .answer p{
+    color: #000;
+    font-size: 15px;
+    padding: 2rem;
+    
+  }
+  .answer li{
+    color: #000;
+    font-size: 20px;
+    padding: 2rem;
+  }
+  
+  .accordion-item:target .answer{
+    max-height: 20rem;
+  }
+  
+  .accordion-item:target .accordion-link .ion-md-arrow-forward{
+    display: none
+  }
+  
+  .accordion-item:target .accordion-link .ion-md-arrow-down{
+    display: block;
+  }
